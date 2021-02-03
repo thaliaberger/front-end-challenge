@@ -1,43 +1,70 @@
-# `AMARO front-end challenge` 
+# Getting Started with Create React App
 
-This is our challenge for the front-end developer position at [@amarofashion](https://github.com/amarofashion).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You're probably already participating in our hiring process, but if you stumble here by accident, read the document to the end and if you are interested, you can start the process from here.
+## Available Scripts
 
-If you are not a developer, you can have a look at our other opportunities at: [amaro.com/jobs](https://amaro.com/jobs)
+In the project directory, you can run:
 
-## About the challenge
+### `npm start`
 
-This is a challenge, not a college test, so there are multiple correct answers.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-We'll give you some requirements that must be done and for which you'll be evaluated, but you're free to choose a solution method.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-What we expect to learn from you with this challenge:
+### `npm test`
 
-- Your work style.
-- How you think and solve problems.
-- How you communicate.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-What we expect that you learn from us:
+### `npm run build`
 
-- How we work as a team.
-- Have a close look at some of the problems we face daily.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Next steps
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. Fork this repository to your personal account.
-2. Follow the instructions in the [`challenge-description`](/challenge-description.md) file.
-3. Solve the challenge in the best way you can.
-4. Send us a PR with your solution.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Considerations
+### `npm run eject`
 
-- We won't limit your choice of tools or libraries. But make choices that suits your needs. There's no need to use a bazooka to kill an ant but the point of the challenge is to evaluate your skills.
-- Despite not having a time limit, we recommend that you don't spend more than **10 to 12 hours** working on this challenge.
-- Try to write the best code you possibly can. It will make our life easier when evaluating your solution. And remember: you'll have to explain it in person for us.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Doubts?
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Do you have in doubt related to the process? Open an [issue](https://github.com/amaroteam/front-end-challenge/issues) and we'll be happy to help.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-**Break a leg!**
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
