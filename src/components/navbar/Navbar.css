@@ -1,0 +1,29 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: #fafafa;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+}
+.page-title {
+  font-weight: lighter;
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+.cart-nav a {
+  display: flex;
+  flex-direction: row;
+}

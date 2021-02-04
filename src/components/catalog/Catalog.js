@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import products from "../../products.json";
+import { useSelector, useDispatch } from "react-redux";
 
+import Navbar from "../navbar/Navbar.js";
 import "./Catalog.css";
 
-function Homepage() {
-  const [allProducts, setAllProducts] = useState(products.products);
+function Catalog() {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  const [allProducts, setAllProducts] = useState(products);
   const [currentProduct, setCurrentProduct] = useState({ id: "", size: "" });
   const [cart, setCart] = useState([]);
 
@@ -13,46 +16,55 @@ function Homepage() {
       id: `${event.target.parentNode.parentNode.id}`,
       size: `${event.target.innerHTML}`,
     });
+    event.target.className === "unselected-size"
+      ? (event.target.className = "selected-size")
+      : (event.target.className = "unselected-size");
   }
 
   function handleCart(event) {
-    if (!cart.length) {
-      if (event.target.parentNode.id === currentProduct.id) {
-        setCart([currentProduct]);
-      } else {
-        console.log("selecione um tamanho");
-      }
-    } else if (event.target.parentNode.id === currentProduct.id) {
-      setCart([...cart, currentProduct]);
+    if (event.target.parentNode.id === currentProduct.id) {
+      dispatch({
+        type: "ADD",
+        id: `${currentProduct.id}`,
+        size: `${currentProduct.size}`,
+      });
     } else {
       console.log("selecione um tamanho");
     }
   }
-
   console.log(cart);
 
   return (
     <div className="container">
-      <h1 className="page-title">AMARO</h1>
+      <Navbar />
       <div className="all-products">
         {allProducts.map((item) => (
           <div key="" id={item.style} className="each-product">
             <img className="product-image" src={item.image} />
-            <p>{item.name}</p>
+            <p className="product-name">{item.name}</p>
             {item.on_sale ? (
-              <div key="">
-                <h2 className="SALE-BADGE">ON SALE</h2>
-                <h3>{item.discount_percentage} OFF</h3>
-                <p>{item.regular_price}</p>
-                <p>NOW {item.actual_price}</p>
+              <div className="price-div" key="">
+                <h3 className="sale-badge">
+                  ON SALE {item.discount_percentage} OFF
+                </h3>
+                <p>
+                  <small>{item.regular_price}</small>
+                </p>
+                <p>
+                  NOW <strong>{item.actual_price}</strong>
+                </p>
               </div>
             ) : (
-              <p>{item.regular_price}</p>
+              <p className="price-div">
+                <strong>{item.regular_price}</strong>
+              </p>
             )}
 
             <div className="sizes-div">
               {item.sizes.map((currentSize) => (
-                <p onClick={handleSize}>{currentSize.size}</p>
+                <p className="unselected-size" onClick={handleSize}>
+                  {currentSize.size}
+                </p>
               ))}
             </div>
             <button onClick={handleCart} className="add-btn">
@@ -65,4 +77,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Catalog;

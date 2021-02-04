@@ -1,0 +1,16 @@
+.cart-quantities {
+  display: flex;
+}
+
+.cart-div {
+  width: 150px;
+}
+
+.cart-image {
+  width: 150px;
+}
+
+.cart-quantities {
+  width: 150px;
+  align-items: baseline;
+}

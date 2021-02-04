@@ -6,10 +6,8 @@
 
 body {
   background-color: #f8f8f8;
-}
-
-.page-title {
-  margin: 30px 0 40px 0;
+  padding-top: 80px;
+  font-family: "Gotham";
 }
 
 .container {
@@ -23,39 +21,92 @@ body {
 .all-products {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 30px;
+  width: 90%;
 }
 
 /* EACH PRODUCT */
 
 .each-product {
-  width: 250px;
+  width: 200px;
   margin: 20px auto;
 }
 
-.each-product p {
-  margin-top: 10px;
+.product-name {
+  height: 40px;
 }
 
 .product-image {
-  width: 250px;
+  width: 200px;
+}
+
+.price-div {
+  height: 80px;
 }
 
 .sizes-div {
   display: flex;
+  justify-content: center;
+}
+
+.unselected-size {
+  cursor: pointer;
+  background-color: #c7c7c7;
+  color: white;
+  padding: 10px;
+  margin: 0 2px;
+  text-align: center;
+}
+
+.selected-size {
+  cursor: pointer;
+  background-color: #9c9c9c;
+  color: white;
+  padding: 10px;
+  margin: 0 2px;
+  text-align: center;
+}
+
+.sizes-div p:hover {
+  background-color: #d6d6d6;
+}
+
+.sale-badge {
+  color: white;
+  background-color: rgb(151, 0, 0);
+  text-align: center;
 }
 
 /* ADD TO CART BUTTON */
 
 .add-btn {
+  display: flex;
   cursor: pointer;
-  margin: 20px 0 10px 60px;
+  margin: 20px auto 10px auto;
   border: none;
-  background-color: black;
+  background-color: rgb(53, 53, 53);
   color: white;
   padding: 5px 8px;
-  border-radius: 25px;
 }
 
 .add-btn:hover {
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(31, 31, 31);
+}
+
+@media screen and (min-width: 600px) {
+  .all-products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .all-products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .all-products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
